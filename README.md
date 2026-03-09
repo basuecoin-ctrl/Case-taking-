@@ -130,27 +130,106 @@ border-radius:10px;
 <input placeholder="Weight">
 <input placeholder="Temperature">
 
-<h2>10. Diagnosis</h2>
+<h2>10 lab test report</h2>
+<input type="file"id="labReport">
+
+<h2>11. Diagnosis</h2
 
 <textarea placeholder="Clinical Diagnosis"></textarea>
 
-<h2>11. Totality of Symptoms</h2>
+<h2>12. Totality of Symptoms</h2>
 
 <textarea placeholder="Important symptoms for remedy selection"></textarea>
 
-<h2>12. Remedy Selection</h2>
+<h2>13. Remedy Selection</h2>
 
-<input placeholder="Selected Remedy">
+<input list="remedies" id="remedySearch" placeholder="Search Remedy">
+
+<datalist id="remedies">
+
+<option value="Aconite">
+<option value="Arnica">
+<option value="Arsenicum Album">
+<option value="Belladonna">
+<option value="Bryonia">
+<option value="Calcarea Carb">
+<option value="Chamomilla">
+<option value="China">
+<option value="Gelsemium">
+<option value="Hepar Sulph">
+<option value="Ignatia">
+<option value="Lycopodium">
+<option value="Merc Sol">
+<option value="Natrum Mur">
+<option value="Nux Vomica">
+<option value="Phosphorus">
+<option value="Pulsatilla">
+<option value="Rhus Tox">
+<option value="Sepia">
+<option value="Silicea">
+<option value="Sulphur">
+<option value="hydrophobinum/Lyssinum">
+<option value="Thuja Occidentals">
+<option value="Medorrhinum">
+<option value="Carbo Vegetabillis">
+
+</datalist>
 <input placeholder="Potency">
 <input placeholder="Dose">
 
-<h2>13. Prescription</h2>
+<h2>14. Prescription</h2>
 
 <textarea placeholder="Medicine instruction"></textarea>
 
-<h2>14. Follow Up</h2>
+<h2>15. Follow Up</h2>
 
 <input type="date">
+
+function savePatient(){
+
+let p={
+
+name:document.getElementById("name").value,
+age:document.getElementById("age").value,
+mobile:document.getElementById("mobile").value,
+complaint:document.getElementById("complaint").value,
+mental:document.getElementById("mental").value,
+history:document.getElementById("history").value,
+medicine:document.getElementById("medicine").value,
+remedy:document.getElementById("remedySearch").value,
+followup:document.getElementById("followup").value
+
+};
+
+patients.push(p);
+
+localStorage.setItem("patients",JSON.stringify(patients));
+
+showPatients();
+
+}
+row.insertCell(4).innerHTML=p.remedy;
+row.insertCell(5).innerHTML=p.medicine;
+row.insertCell(6).innerHTML=p.followup;
+
+let viewBtn=document.createElement("button");
+viewBtn.innerHTML="View Case";
+
+viewBtn.onclick=function(){
+
+alert(
+"Name: "+p.name+
+"\nAge: "+p.age+
+"\nComplaint: "+p.complaint+
+"\nMental: "+p.mental+
+"\nPast History: "+p.history+
+"\nRemedy: "+p.remedy+
+"\nMedicine: "+p.medicine
+);
+
+}
+
+row.insertCell(8).appendChild(viewBtn);
 
 <br>
 
