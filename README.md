@@ -1,26 +1,28 @@
-
+<!DOCTYPE html>
 <html>
 <head>
-<title> Case Taking </title>
+
+<title>Homoeopathy Clinic</title>
 
 <style>
 
 body{
-font-family: Arial;
-background:#f3f3f3;
+font-family:Arial;
+background:#f2f2f2;
 padding:20px;
+}
+
+.container{
+background:white;
+padding:20px;
+border-radius:10px;
 }
 
 h1{
 color:darkgreen;
 }
 
-h2{
-background:#e6ffe6;
-padding:5px;
-}
-
-input, textarea, select{
+input,textarea,select{
 width:100%;
 padding:8px;
 margin:5px 0;
@@ -32,10 +34,16 @@ margin-top:10px;
 cursor:pointer;
 }
 
-.container{
-background:white;
-padding:20px;
-border-radius:10px;
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
 }
 
 </style>
@@ -46,104 +54,35 @@ border-radius:10px;
 
 <div class="container">
 
-<h1>Homoeopathy Case Taking Form</h1>
+<h1>Homoeopathy Case Taking</h1>
 
-<h2>1. Patient Identification</h2>
+<h3>Patient Information</h3>
 
-<input placeholder="Patient Name">
-<input placeholder="Age">
-<select>
-<option>Male</option>
-<option>Female</option>
-</select>
-<input placeholder="Marital Status">
-<input placeholder="Occupation">
-<input placeholder="Mobile Number">
-<textarea placeholder="Address"></textarea>
+<input id="name" placeholder="Patient Name">
+<input id="age" placeholder="Age">
+<input id="mobile" placeholder="Mobile">
 
-<h2>2. Chief Complaint</h2>
+<textarea id="address" placeholder="Address"></textarea>
 
-<textarea placeholder="Main Complaint"></textarea>
-<input placeholder="Since When">
-<textarea placeholder="Cause of Disease"></textarea>
-<textarea placeholder="What makes it worse"></textarea>
-<textarea placeholder="What makes it better"></textarea>
+<h3>Chief Complaint</h3>
 
-<h2>3. History of Present Illness</h2>
+<textarea id="complaint" placeholder="Main Complaint"></textarea>
 
-<textarea placeholder="How disease started"></textarea>
-<textarea placeholder="Progress of disease"></textarea>
-<textarea placeholder="Previous treatment"></textarea>
+<h3>Mental Symptoms</h3>
 
-<h2>4. Past History</h2>
+<textarea id="mental" placeholder="Anger / Fear / Anxiety"></textarea>
 
-<textarea placeholder="Previous diseases"></textarea>
-<textarea placeholder="Surgery history"></textarea>
+<h3>Past History</h3>
 
-<h2>5. Family History</h2>
+<textarea id="history" placeholder="Past Disease"></textarea>
 
-<textarea placeholder="Father disease history"></textarea>
-<textarea placeholder="Mother disease history"></textarea>
+<h3>Lab Test Report</h3>
 
-<h2>6. Physical Generals</h2>
-
-<label>Appetite</label>
-<select>
-<option>Normal</option>
-<option>Low</option>
-<option>High</option>
-</select>
-
-<label>Thirst</label>
-<select>
-<option>Less</option>
-<option>Normal</option>
-<option>More</option>
-</select>
-
-<label>Sleep</label>
-<select>
-<option>Good</option>
-<option>Disturbed</option>
-<option>Insomnia</option>
-</select>
-
-<input placeholder="Food Desire (sweet / sour / salt)">
-<input placeholder="Food Aversion">
-
-<h2>7. Mental Symptoms</h2>
-
-<textarea placeholder="Anger / Fear / Anxiety"></textarea>
-<textarea placeholder="Sadness / Depression"></textarea>
-<textarea placeholder="Memory / Concentration"></textarea>
-
-<h2>8. Female History</h2>
-
-<input placeholder="Menstrual Cycle">
-<input placeholder="Leucorrhoea">
-<input placeholder="Pregnancy History">
-
-<h2>9. Physical Examination</h2>
-
-<input placeholder="Blood Pressure">
-<input placeholder="Pulse">
-<input placeholder="Weight">
-<input placeholder="Temperature">
-
-<h2>10 lab test report</h2>
 <input type="file" id="labReport">
 
-<h2>11. Diagnosis</h2>
+<h3>Remedy Selection</h3>
 
-<textarea placeholder="Clinical Diagnosis"></textarea>
-
-<h2>12. Totality of Symptoms</h2>
-
-<textarea placeholder="Important symptoms for remedy selection"></textarea>
-
-<h2>13. Remedy Selection</h2>
-
-<input list="remedies" id="remedySearch" placeholder="Search Remedy">
+<input list="remedies" id="remedy">
 
 <datalist id="remedies">
 
@@ -168,11 +107,7 @@ border-radius:10px;
 <option value="Sepia">
 <option value="Silicea">
 <option value="Sulphur">
-<option value="hydrophobinum/Lyssinum">
-<option value="Thuja Occidentalis">
-<option value="Medorrhinum">
-<option value="Carbo Vegetabilis">
-  
+
 </datalist>
 
 <h3>Prescription</h3>
@@ -360,12 +295,4 @@ showPatients();
 </script>
 
 </body>
-</html>  
-  
-
-
-
-
-
-
-
+</html>
