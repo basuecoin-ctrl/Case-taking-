@@ -172,6 +172,7 @@ border-radius:10px;
 <option value="Thuja Occidentals">
 <option value="Medorrhinum">
 <option value="Carbo Vegetabillis">
+</datalist>
 
 <h2>13. Prescription</h2>
 
