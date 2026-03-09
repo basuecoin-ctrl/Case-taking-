@@ -185,7 +185,6 @@ border-radius:10px;
 
 <input type="date">
 
-<javascript>
 let printBtn=document.createElement("button");
 printBtn.innerHTML="Print";
 
