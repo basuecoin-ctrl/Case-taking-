@@ -133,7 +133,7 @@ border-radius:10px;
 <h2>10 lab test report</h2>
 <input type="file" id="labReport">
 
-<h2>11. Diagnosis</h2
+<h2>11. Diagnosis</h2>
 
 <textarea placeholder="Clinical Diagnosis"></textarea>
 
