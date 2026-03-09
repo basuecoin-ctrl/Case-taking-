@@ -169,9 +169,10 @@ border-radius:10px;
 <option value="Silicea">
 <option value="Sulphur">
 <option value="hydrophobinum/Lyssinum">
-<option value="Thuja Occidentals">
+<option value="Thuja Occidentalis">
 <option value="Medorrhinum">
-<option value="Carbo Vegetabillis">
+<option value="Carbo Vegetabilis">
+  
 </datalist>
 
 <h2>13. Prescription</h2>
